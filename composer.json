@@ -1,5 +1,6 @@
 {
     "name": "sadmansh/filament-forms-tinyeditor",
+    "version": "2.3",
     "description": "A TinyMce editor component for Filament",
     "keywords": [
         "laravel",
