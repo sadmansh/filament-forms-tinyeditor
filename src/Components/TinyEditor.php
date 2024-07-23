@@ -48,6 +48,8 @@ class TinyEditor extends Field implements Contracts\CanBeLengthConstrained, Cont
 
     protected string $template;
 
+	protected string $content_style;
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -380,4 +382,13 @@ class TinyEditor extends Field implements Contracts\CanBeLengthConstrained, Cont
 
         return '';
     }
+
+	public function contentStyle(string $content_style): static {
+		$this->content_style = $content_style;
+		return $this;
+	}
+
+	public function getContentStyle(): string {
+		return json_encode(config('filament-forms-tinyeditor.profiles.'.$this->profile.'.content_style'));
+	}
 }

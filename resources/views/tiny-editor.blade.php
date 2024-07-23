@@ -25,6 +25,7 @@
                         dark: 'dark',
                         system: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default',
                     }[typeof theme === 'undefined' ? 'light' : theme],
+					content_style: {{ $getContentStyle() }},
                     max_height: {{ $getMaxHeight() }},
                     min_height: {{ $getMinHeight() }},
                     menubar: {{ $getShowMenuBar() ? 'true' : 'false' }},
